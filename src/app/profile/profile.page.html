@@ -1,0 +1,51 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Jenny Wilson</ion-title>
+    <i class='bx bx-dots-horizontal-rounded' slot="end" style="margin-right: 12px; font-size: 24px;"></i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <img src="../../assets/profile.jpg" alt="" class="avatar">
+  <h1 class="ion-text-center" style="margin-top: -5px; font-weight: 200;">&#64;Danna MC</h1>
+
+  <p class="ion-text-center">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, optio.
+  </p>
+
+  <ion-list>
+    <!--Firts Name-->
+    <ion-label position="floating" color="superblue" style="margin-left: 14px;">First Name</ion-label>
+    <ion-item>
+      <ion-input type="text" color="superblue">
+        <i class='bx bxs-user-rectangle' slot="end" color="superblue"></i>
+      </ion-input>
+    </ion-item>
+    <!--Last Name-->
+    <ion-label position="floating" color="superblue" style="margin-left: 14px;">Last Name</ion-label>
+    <ion-item>
+      <ion-input type="text" color="superblue">
+        <i class='bx bxs-user-account' slot="end" color="superblue"></i>
+      </ion-input>
+    </ion-item>
+    <!--Direction-->
+    <ion-label position="floating" color="superblue" style="margin-left: 14px;">Direction</ion-label>
+    <ion-item>
+      <ion-input type="text" color="superblue">
+        <i class='bx bx-pin' slot="end" color="superblue"></i>
+      </ion-input>
+    </ion-item>
+    <!--Phone Number-->
+    <ion-label position="floating" color="superblue" style="margin-left: 14px;">Phone Number</ion-label>
+    <ion-item>
+      <ion-input type="text" color="superblue">
+        <i class='bx bx-phone' slot="end" color="superblue"></i>
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

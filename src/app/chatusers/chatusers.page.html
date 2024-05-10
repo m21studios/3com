@@ -1,0 +1,32 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contacts</ion-title>
+    <ion-item lines="none" slot="end" color="light">
+      <i class='bx bxs-camera' style="font-size: 22px; margin-right: 8px;"></i>
+      <i class='bx bx-search-alt-2' style="font-size: 22px; margin-right: 8px;"></i>
+      <i class='bx bx-dots-vertical-rounded' style="font-size: 22px; "></i>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list lines="none">
+    <ion-item *ngFor="let user of users" routerLink="/chatroom"> <!--[routerLink]="['/chatroom',user.name,user.image]"-->
+      <ion-avatar>
+        <img src="{{user.image}}" alt="">
+      </ion-avatar>
+      <ion-label>
+        <h1 style="margin-left: 12px; font-size: 16px;">{{user.name}}</h1>
+        <p style="margin-left: 12px; margin-top: -5px; font-size: 14px;">{{user.msg}}</p>
+      </ion-label>
+      <ion-note slot="end">
+        <i class='bx bx-message-rounded-dots' style="font-size: 18px;"></i>
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

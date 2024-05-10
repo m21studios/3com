@@ -1,0 +1,55 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment Methods</ion-title>
+    <i class='bx bx-qr-scan' slot="end" style="font-size: 22px; margin-right: 16px;"></i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list lines="none">
+    
+    <ion-card mode="ios">
+      <ion-item>
+        <ion-label style="font-size: 20px;">
+          <i class='bx bxl-paypal' style="font-size: 26px;"></i> Paypal
+        </ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-card>
+
+
+    <ion-card mode="ios">
+      <ion-item>
+        <ion-label style="font-size: 20px;">
+          <i class='bx bxl-google' style="font-size: 26px;"></i> Google
+        </ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-card>
+
+
+    <ion-card mode="ios">
+      <ion-item>
+        <ion-label style="font-size: 20px;">
+          <i class='bx bxl-apple' style="font-size: 26px;"></i> Pay
+        </ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-card>
+
+
+    <ion-card mode="ios">
+      <ion-item>
+        <ion-label style="font-size: 20px;">
+          <i class='bx bxs-credit-card' style="font-size: 26px;"></i> Credit Card
+        </ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-card>
+
+
+  </ion-list>
+</ion-content>

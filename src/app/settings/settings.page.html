@@ -1,0 +1,91 @@
+
+<ion-content [fullscreen]="true">
+  <div class="profile">
+
+    <img src="../../assets/profile.jpg" alt="">
+    <div>
+      <h1 class="ion-text-center text-white">Hi, Danna MC broure</h1>
+      <p class="ion-text-center text-white" style="margin-top: -20px;">Lorem, ipsum dolor.</p>
+    </div>
+    
+
+  </div>
+  <ion-list class="ion-padding">
+    <ion-item lines="none" routerLink="/profile">
+      <p><span><i class='bx bxs-user-pin' style="margin-right: 20px;"></i></span>Profile</p>
+    </ion-item>
+    <ion-item lines="none" routerLink="/chatusers">
+      <p><span><i class='bx bxs-chat' style="margin-right: 20px;"></i></span>Message</p>
+    </ion-item>
+    <ion-item lines="none">
+      <p><span><i class='bx bxs-coupon' style="margin-right: 20px;"></i></span>Coupon</p>
+    </ion-item>
+    <ion-item lines="none">
+      <p><span><i class='bx bxs-shopping-bags' style="margin-right: 20px;"></i></span>My Order</p>
+    </ion-item>
+    <ion-item lines="none" routerLink="/paymentmethods">
+      <p><span><i class='bx bxs-credit-card' style="margin-right: 20px;"></i></span>Payment Method</p>
+    </ion-item>
+    <ion-item lines="none" id="click-trigger">
+      <p><span><i class='bx bx-globe' style="margin-right: 20px;"></i></span>Lenguaje</p>
+    </ion-item>
+
+    <ion-popover trigger="click-trigger" triggerAction="click" side="top" alignment="center" mode="ios">
+      <ng-template>
+        <ion-content class="ion-padding">
+          <ion-list>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/united-states-of-america.png" alt="">
+              </ion-avatar>
+              <h1>EN</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/flag.png" alt="">
+              </ion-avatar>
+              <h1>ES</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/germany.png" alt="">
+              </ion-avatar>
+              <h1>GR</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/france.png" alt="">
+              </ion-avatar>
+              <h1>FR</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/italy.png" alt="">
+              </ion-avatar>
+              <h1>IT</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/brazil-.png" alt="">
+              </ion-avatar>
+              <h1>PR</h1>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="../../assets/country/china.png" alt="">
+              </ion-avatar>
+              <h1>CH</h1>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+
+    <div class="vspace"></div>
+    <div class="vspace"></div>
+
+    <ion-item lines="none" routerLink="/home">
+      <p><span><i class='bx bx-log-out' style="margin-right: 20px;"></i></span>Logout</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

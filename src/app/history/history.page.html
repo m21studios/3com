@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar >
+    <ion-title>Wishlist</ion-title> 
+    <i class='bx bxs-shopping-bag' slot="end" style="margin-right: 12px; font-size: 24px;"></i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div *ngIf="isEmpty" style="display: flex; flex-direction: column; justify-content: center; width: 100%;">
+    <i class='bx bx-package' 
+    style="display: flex; justify-content: center; font-size: 98px; color: #3b28cc; margin-top: 120px;"></i>
+    <h1 class="ion-text-center" style="font-size: 32px; font-weight: 400;">Your Wishlist is Empty</h1>
+    <p class="ion-text-center" style="font-size: 16px; font-weight: 200; margin-top: -10px;">Tap heart button to start saving your favorite items.</p>
+
+    <div class="vspace"></div>
+    <ion-button mode="ios" fill="solid" expand="full" color="superblue">Add Now</ion-button>
+  </div>
+
+  <ion-list *ngIf="isActive">
+    <ion-item mode="ios" *ngFor="let products of PopularInStore">
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="{{products.image}}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h1 style="display: flex; font-size: 22px; font-weight: 500;">
+          {{products.name}} 
+        </h1>
+        <p style="font-weight: 400; font-size: 16px; display: flex; justify-content: space-between;" >
+          ${{products.price}} 
+          <span>
+            <i class='bx bxs-star' color="main" style="font-size: 16px; margin-left: 32px;"></i> 4.7
+          </span>
+        </p>
+      </ion-label>
+      <!--ion-note slot="end" color="superblue" style="font-size: 16px; margin-top: -15px;">
+        <i class='bx bxs-heart-square' ></i>
+      </ion-note-->
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

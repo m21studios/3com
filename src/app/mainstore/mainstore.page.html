@@ -1,0 +1,99 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar >
+    <ion-title>Mystore</ion-title>
+    <i class='bx bxs-store-alt' slot="end" style="margin-right: 12px; font-size: 24px;"></i>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar mode="ios"></ion-searchbar>
+    <i class='bx bx-dots-vertical-rounded' slot="end" style=" font-size: 24px; margin-right: 12px; margin-top: -10px;"></i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!--Categories-->
+  <ion-item lines="none">
+    <ion-label mode="ios">Categories</ion-label>
+    <ion-note slot="end">View all</ion-note>
+  </ion-item>
+  
+
+  <swiper-container [slidesPerView]="3.5" [spaceBetween]="20">
+    <swiper-slide *ngFor="let category of categories" class="slide-content">{{category.name}}</swiper-slide>
+  </swiper-container>
+
+  <br>
+
+  <!--Popular-->
+  <ion-item lines="none">
+    <ion-label mode="ios">Popular</ion-label>
+    <ion-note slot="end">View all</ion-note>
+  </ion-item>
+
+  <swiper-container [slidesPerView]="1.5" [spaceBetween]="20">
+    <swiper-slide *ngFor="let popular of PopularInStore">
+      <ion-card mode="ios" (click)="viewProductDetail(popular.image,popular.name,popular.price)">
+        <img src="{{popular.image}}" alt="" style="width: 100%; height: 120px; object-fit: cover;">
+        <ion-card-content>
+          <div style="height: 60px;">
+            <h1 style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 500;">
+              {{popular.name}} 
+              <span style="font-weight: 300;">${{popular.price}}</span>
+            </h1>
+            <p style="font-size: 12px; font-weight: 200;">{{popular.category}}</p>
+          </div>
+          
+        </ion-card-content>
+      </ion-card>
+      
+    </swiper-slide>
+  </swiper-container>
+
+  <br>
+
+  <!--Popular-->
+  <ion-item lines="none">
+    <ion-label mode="ios">New Arrivals</ion-label>
+    <ion-note slot="end">View all</ion-note>
+  </ion-item>
+
+
+  <div class="grid-gallery">
+    <a class="grid-gallery__item" *ngFor="let products of PopularInStore">
+      <img class="grid-gallery__image" src="{{products.image}}">
+      <h1 style="display: flex; font-size: 12px; font-weight: 500; color: black; margin-top: -5px;">
+        {{products.name}} 
+      </h1>
+      <p style="font-weight: 300; color: black; margin-top: -15px;" >${{products.price}}</p>
+    </a>
+  </div>
+
+
+  <!--Product list-->
+  <ion-item lines="none">
+    <ion-label mode="ios">Best Rating</ion-label>
+    <ion-note slot="end">View all</ion-note>
+  </ion-item>
+
+  <ion-list lines="none">
+    <ion-item mode="ios" *ngFor="let products of PopularInStore">
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="{{products.image}}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h1 style="display: flex; font-size: 22px; font-weight: 500;">
+          {{products.name}} 
+        </h1>
+        <p style="font-weight: 400; font-size: 16px; display: flex; justify-content: space-between;" >
+          ${{products.price}} 
+          <span>
+            <i class='bx bxs-star' color="main" style="font-size: 16px; margin-left: 32px;"></i> 4.7
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+
+
+</ion-content>

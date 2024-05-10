@@ -1,0 +1,83 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!--ion-avatar slot="start">
+      <img [src]="image" alt="" style="width: 42px; height: 42px; margin-top: 10px;">
+    </ion-avatar>
+    <ion-title style="margin-left: -30px; font-size: 14px;">{{username}}</ion-title-->
+    <ion-item color="light" slot="end" lines="none">
+      <i class='bx bxs-camera' style="font-size: 22px; margin-right: 8px;"></i>
+      <i class='bx bx-phone' style="font-size: 22px; margin-right: 8px;"></i>
+      <i class='bx bx-dots-vertical-rounded' style="font-size: 22px; "></i>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!--Chat Box Left-->
+  
+  <div class="chatleft">
+    <div class="avatar-img">
+      <img src="../../assets/profiles/02.jpg" alt="" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover;">
+    </div>
+    <div class="content-msg">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+
+  <!--Chat Box Right-->
+  <div class="chatright"> 
+    <div class="content-msg">
+      <p>Lorem ipsum dol</p>
+    </div>
+    <div class="avatar-img">
+      <img src="../../assets/profiles/04.jpg" alt="" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover;">
+    </div>
+  </div>
+
+  <div class="chatright"> 
+    <div class="content-msg">
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <div class="avatar-img">
+      <img src="../../assets/profiles/04.jpg" alt="" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover;">
+    </div>
+  </div>
+
+  <div class="chatleft">
+    <div class="avatar-img">
+      <img src="../../assets/profiles/02.jpg" alt="" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover;">
+    </div>
+    <div class="content-msg">
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </div>
+
+  <div class="chatright"> 
+    <div class="content-msg">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In consequatur doloremque deserunt!</p>
+    </div>
+    <div class="avatar-img">
+      <img src="../../assets/profiles/04.jpg" alt="" style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover;">
+    </div>
+  </div>
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border" class="ion-padding">
+  <ion-toolbar>
+    <ion-input lines="none" slot="start" color="mainblue">
+      <i class='bx bx-smile' slot="start"></i>
+      <i class='bx bx-paperclip' slot="end"></i>
+      <i class='bx bx-camera' slot="end"></i>
+    </ion-input>
+    <ion-chip slot="end" color="mainblue">
+      <i class='bx bx-send' style="font-size: 18px;"></i>
+    </ion-chip>
+  </ion-toolbar>
+
+</ion-footer>

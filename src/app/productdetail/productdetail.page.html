@@ -1,0 +1,64 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mystore</ion-title>
+    <i class='bx bxs-store-alt' slot="end" style="margin-right: 12px; font-size: 24px;"></i>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="product-image">
+    <img src="{{product.image}}" alt="" >
+    <div class="circle-content">
+      <i class='bx bx-heart' style="font-size: 24px; font-weight: 300;"></i>
+    </div>
+  </div>
+  
+  
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>
+        <h1>{{product.name}}</h1>
+        <p>$ {{product.price}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>Description</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur 
+          adipisicing elit. Odit voluptatibus dicta 
+          molestias tenetur sapiente qui saepe perspiciatis 
+          voluptatem corrupti quod, dolorem, suscipit amet, 
+          adipisci culpa in quaerat cumque laborum. 
+          Minima, officiis? Blanditiis.
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-chip slot="end" color="superblue">Cart</ion-chip>
+      <ion-chip slot="end" color="main">Buy</ion-chip>
+    </ion-item>
+
+    <ion-list class="ion-padding">
+      <div *ngFor="let data of reviews" class="card-reviews">
+        <div class="avatar-card">
+          <img src="{{data.avatar}}" alt="">
+        </div>
+        <div class="card-content">
+          <p>{{data.text}}</p>
+          <ion-item style="margin-top: -35px !important;">
+            <ion-note slot="end">
+              <i class='bx bxs-star' style="color: #3b28cc;"></i> {{data.starts}}
+            </ion-note>
+          </ion-item>
+        </div>
+      </div>
+    </ion-list>
+    
+    
+  </ion-list>
+</ion-content>

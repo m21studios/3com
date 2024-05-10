@@ -3,6 +3,28 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  --ion-color-main: #393e41;
+	--ion-color-main-rgb: 57,62,65;
+	--ion-color-main-contrast: #ffffff;
+	--ion-color-main-contrast-rgb: 255,255,255;
+	--ion-color-main-shade: #323739;
+	--ion-color-main-tint: #4d5154;
+
+  --ion-color-mainblue: #3d348b;
+	--ion-color-mainblue-rgb: 61,52,139;
+	--ion-color-mainblue-contrast: #ffffff;
+	--ion-color-mainblue-contrast-rgb: 255,255,255;
+	--ion-color-mainblue-shade: #362e7a;
+	--ion-color-mainblue-tint: #504897;
+
+  --ion-color-superblue: #3b28cc;
+	--ion-color-superblue-rgb: 59,40,204;
+	--ion-color-superblue-contrast: #ffffff;
+	--ion-color-superblue-contrast-rgb: 255,255,255;
+	--ion-color-superblue-shade: #3423b4;
+	--ion-color-superblue-tint: #4f3ed1;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +96,33 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+.ion-color-main {
+	--ion-color-base: var(--ion-color-main);
+	--ion-color-base-rgb: var(--ion-color-main-rgb);
+	--ion-color-contrast: var(--ion-color-main-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-main-contrast-rgb);
+	--ion-color-shade: var(--ion-color-main-shade);
+	--ion-color-tint: var(--ion-color-main-tint);
+}
+
+.ion-color-mainblue {
+	--ion-color-base: var(--ion-color-mainblue);
+	--ion-color-base-rgb: var(--ion-color-mainblue-rgb);
+	--ion-color-contrast: var(--ion-color-mainblue-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-mainblue-contrast-rgb);
+	--ion-color-shade: var(--ion-color-mainblue-shade);
+	--ion-color-tint: var(--ion-color-mainblue-tint);
+}
+
+.ion-color-superblue {
+	--ion-color-base: var(--ion-color-superblue);
+	--ion-color-base-rgb: var(--ion-color-superblue-rgb);
+	--ion-color-contrast: var(--ion-color-superblue-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-superblue-contrast-rgb);
+	--ion-color-shade: var(--ion-color-superblue-shade);
+	--ion-color-tint: var(--ion-color-superblue-tint);
 }
 
 @media (prefers-color-scheme: dark) {
